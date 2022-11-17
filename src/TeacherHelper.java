@@ -2,14 +2,14 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class TeacherHelper {
-
-	public static final double horaAula = 17.50;
+	
+	public static final double HORA_AULA = 17.50; 
 	public static void main(String[] args) {
-		int opcao=0, numeroAulas, qtdeAlunos, i;
+		
+		int opcao=0, numeroAulas, qtdAlunos, i;
 		double salarioBase, horaAtividade, descansoSemanalRemunerado, salario, notaAluno, mediaAlunos;
 		
 		Random gerador = new Random();
-		
 		Scanner leitor = new Scanner(System.in);
 		
 		while(opcao!=4) {
@@ -41,15 +41,15 @@ public class TeacherHelper {
 				break;
 			case 2:
 				System.out.println("Para calcularmos a média das notas dos alunos é preciso saber, primeiramente, quantos alunos estão na turma:");
-				qtdeAlunos = leitor.nextInt();
+				qtdAlunos = leitor.nextInt();
 				i = 0;
 				mediaAlunos=0;
-				while (i<qtdeAlunos) {
+				while (i<qtdAlunos) {
 					System.out.println("Digite a nota do " + (i+1) + "º aluno:");
 					notaAluno = leitor.nextDouble();
 					mediaAlunos = mediaAlunos + notaAluno;
 				}
-				mediaAlunos = mediaAlunos / qtdeAlunos;
+				mediaAlunos = mediaAlunos / qtdAlunos;
 				System.out.println("A média de notas dos alunos dessa turma é " + mediaAlunos);
 				
 				break;
@@ -81,7 +81,6 @@ public class TeacherHelper {
 			case 4:
 				System.out.println("Encerrando o sistema...");
 				break;
-				
 			}
 		}
 	
