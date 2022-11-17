@@ -52,14 +52,18 @@ public class TeacherHelper {
 					System.out.println("Digite a nota do " + (i + 1) + "º aluno:");
 					notaAluno = leitor.nextDouble();
 					mediaAlunos = mediaAlunos + notaAluno;
+					i++;
 				}
 				mediaAlunos = mediaAlunos / qtdAlunos;
 				System.out.println("A média de notas dos alunos dessa turma é " + mediaAlunos);
-
+				
 				break;
 			case 3:
 
 				switch (gerador.nextInt(7)) {
+				case 0:
+					System.out.println("Não há bug que você não possa superar!");
+					break;
 				case 1:
 					System.out.println("Você é um professor incrível!");
 					break;
